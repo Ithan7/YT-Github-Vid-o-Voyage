@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de voyage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Création du formulaire qui va contenir les éléments -->
+    <form id="voyageForm">
+        <!-- Titre du formulaire -->
+        <h1>Calculateur de prix de voyage</h1>
+        <!-- Selectionneur de destination -->
+        <label for="destination">Choisissez une destination :</label> <!--Légende du selectionneur-->
+        <select name="destination" id="destination">
+            <option value="islande">Islande</option> <!--Séléctions possible pour les déstinations-->
+            <option value="norvège">Norvège</option>
+            <option value="portugal">Portugal</option>
+            <option value="canada">Canada</option>
+            <option value="mexique">Mexique</option>
+        </select>
+        <!-- Choisir le nombre de personnes -->
+        <label for="nombrePersonnes">Nombre de personnes :</label> <!--Légende de l'élément de saisie-->
+        <input type="number" name="nombrePersonnes" id="nombrePersonnes" min="1" value="1"> <!--Element de saisie qui va permettre de mettre de mettre le nombre de personnes-->
+        <!-- Choisir la gamme de nuit -->
+        <label for="gammeNuit">Choisissez votre gamme de nuit :</label>
+        <select name="gammeNuit" id="gammeNuit">
+            <option value="basique">Basique</option>
+            <option value="confortable">Confortable</option>
+            <option value="prestigieux">Prestigieux</option>
+        </select>
+        <!-- Choisir nombre de nuits -->
+        <label for="nombreNuits">Nombre de nuits :</label>
+        <input type="number" name="nombreNuits" id="nombreNuits" min="1" value="1">
+        <!-- Boutton pour calculer le prix -->
+        <button type="button" onclick="calculerPrix()">Calculer</button>
+        <!-- texte avec résultat -->
+        <p id="resultat"></p>
+    </form>
+</body>
+</html>
